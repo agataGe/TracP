@@ -71,46 +71,6 @@ $secret_key = hex2bin('put ur secret key here');
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
-<script>
-// ---------Responsive-navbar-active-animation-found-on-internet-dont remmbr where.. sorry! :( ->if anybody -----------
-function test(){
-  var tabsNewAnim = $('#navbarSupportedContent');
-  var selectorNewAnim = $('#navbarSupportedContent').find('li').length;
-  var activeItemNewAnim = tabsNewAnim.find('.active');
-  var activeWidthNewAnimHeight = activeItemNewAnim.innerHeight();
-  var activeWidthNewAnimWidth = activeItemNewAnim.innerWidth();
-  var itemPosNewAnimTop = activeItemNewAnim.position();
-  var itemPosNewAnimLeft = activeItemNewAnim.position();
-  $(".hori-selector").css({
-    "top":itemPosNewAnimTop.top + "px", 
-    "left":itemPosNewAnimLeft.left + "px",
-    "height": activeWidthNewAnimHeight + "px",
-    "width": activeWidthNewAnimWidth + "px"
-  });
-  $("#navbarSupportedContent").on("click","li",function(e){
-    $('#navbarSupportedContent ul li').removeClass("active");
-    $(this).addClass('active');
-    var activeWidthNewAnimHeight = $(this).innerHeight();
-    var activeWidthNewAnimWidth = $(this).innerWidth();
-    var itemPosNewAnimTop = $(this).position();
-    var itemPosNewAnimLeft = $(this).position();
-    $(".hori-selector").css({
-      "top":itemPosNewAnimTop.top + "px", 
-      "left":itemPosNewAnimLeft.left + "px",
-      "height": activeWidthNewAnimHeight + "px",
-      "width": activeWidthNewAnimWidth + "px"
-    });
-  });
-}
-$(document).ready(function(){
-  setTimeout(function(){ test(); });
-});
-$(window).on('resize', function(){
-  setTimeout(function(){ test(); }, 500);
-});
-$(".navbar-toggler").click(function(){
-  setTimeout(function(){ test(); });
-});
-</script>
+
 </body>
 </html>
